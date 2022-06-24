@@ -4,7 +4,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
-    background: url('/assets/images/login.jpg')no-repeat center;
+    background: url('/assets/images/login_bg.jpg')no-repeat center;
     background-size: cover;
 }
 
@@ -19,5 +19,21 @@ body {
 }
 
 .title-box {
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex2 {
+    flex: 2
+}
+
+.flex1 {
+    flex: 1
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
 }

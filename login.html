@@ -15,8 +15,33 @@
         <img src="./assets/images/logo.png" alt="">
     </div>
     <!-- 登录注册区域 -->
-    <div class="loginAndRegBox">
-        <div class="title-box">后台管理系统</div>
+    <div class="loginAndRegBox flex">
+       <div class="headerbox flex1 title-box">
+           <img src="./assets/images/login_title.png" alt="">
+       </div>
+       <div class="formbox flex2">
+        <div class="layui-form-item">
+            <label class="layui-form-label">username:</label>
+            <div class="layui-input-block">
+              <input type="text" name="" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">password:</label>
+            <div class="layui-input-block">
+              <input type="text" name="" placeholder="请输入密码" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+       </div>
+       <div class="submitbox flex1">
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+              <button class="layui-btn" lay-submit lay-filter="*">登录</button>
+              <button type="reset" class="layui-btn layui-btn-primary">注册</button>
+            </div>
+          </div>
+       </div>
     </div>
+    
 </body>
 </html>
