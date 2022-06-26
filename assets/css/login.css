@@ -25,8 +25,13 @@ body {
     align-items: center;
 }
 
-.flex2 {
-    flex: 2
+/* 辅助边框 */
+/* .border {
+    border: 1px solid black;
+} */
+
+.flex3 {
+    flex: 3
 }
 
 .flex1 {
@@ -36,4 +41,31 @@ body {
 .flex {
     display: flex;
     flex-direction: column;
+}
+
+.reg-box {
+    display: none;
+}
+
+.layui-form-item {
+    position: relative;
+}
+
+.layui-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px
+}
+
+.layui-input {
+    padding-left: 30px;
+}
+
+.flex4 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.formbox {
+    padding: 5px;
 }

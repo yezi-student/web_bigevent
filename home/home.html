@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <script src="/assets/lib/layui/layui.js"></script>
+    <script>
+        layui.use('element', function(){
+      var element = layui.element;
+            
+      //一些事件触发
+      element.on('tab(demo)', function(data){
+        console.log(data);
+      });
+    });
+    </script>
+</head>
+<body>
+    <div class="layui-col-md12">
+        <div class="layui-row grid-demo grid-demo-bg1">
+            <!-- 头部 -->
+          <div class="layui-col-md12">
+            <ul class="layui-nav">
+                <li class="layui-nav-item">
+                  <a href="">控制台<span class="layui-badge">9</span></a>
+                </li>
+                <li class="layui-nav-item">
+                  <a href="">个人中心<span class="layui-badge-dot"></span></a>
+                </li>
+                <li class="layui-nav-item">
+                  <a href=""><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>
+                  <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">修改信息</a></dd>
+                    <dd><a href="javascript:;">安全管理</a></dd>
+                    <dd><a href="javascript:;">退了</a></dd>
+                  </dl>
+                </li>
+              </ul>
+          </div>
+          <!-- 左1 -->
+          <div class="layui-col-md2 ">
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+                  <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">默认展开</a>
+                    <dl class="layui-nav-child">
+                      <dd><a href="javascript:;">选项1</a></dd>
+                      <dd><a href="javascript:;">选项2</a></dd>
+                      <dd><a href="">跳转</a></dd>
+                    </dl>
+                  </li>
+                  <li class="layui-nav-item">
+                    <a href="javascript:;">解决方案</a>
+                    <dl class="layui-nav-child">
+                      <dd><a href="">移动模块</a></dd>
+                      <dd><a href="">后台模版</a></dd>
+                      <dd><a href="">电商平台</a></dd>
+                    </dl>
+                  </li>
+                  <li class="layui-nav-item"><a href="">产品</a></li>
+                  <li class="layui-nav-item"><a href="">大数据</a></li>
+                </ul>
+          </div>
+          <!-- 右1 -->
+          <div class="layui-col-md10 ">
+            <!-- <div class="layui-container">   -->
+                <!-- 表格 -->
+                <div class="layui-row">
+                  <div class="layui-col-md9 ">
+                    <table class="layui-table">
+                        <colgroup>
+                          <col width="150">
+                          <col width="200">
+                          <col>
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>昵称</th>
+                            <th>加入时间</th>
+                            <th>签名</th>
+                          </tr> 
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>贤心</td>
+                            <td>2016-11-29</td>
+                            <td>人生就像是一场修行</td>
+                          </tr>
+                          <tr>
+                            <td>许闲心</td>
+                            <td>2016-11-28</td>
+                            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+                          </tr>
+                          <tr>
+                            <td>许闲心</td>
+                            <td>2016-11-28</td>
+                            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+                          </tr>
+                          <tr>
+                            <td>许闲心</td>
+                            <td>2016-11-28</td>
+                            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+                          </tr>
+                          <tr>
+                            <td>许闲心</td>
+                            <td>2016-11-28</td>
+                            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+                          </tr>
+                          <tr>
+                            <td>许闲心</td>
+                            <td>2016-11-28</td>
+                            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+                          </tr>
+                          <tr>
+                            <td>许闲心</td>
+                            <td>2016-11-28</td>
+                            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+                          </tr>
+                          <tr>
+                            <td>许闲心</td>
+                            <td>2016-11-28</td>
+                            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+                          </tr>
+                          <tr>
+                            <td>贤心</td>
+                            <td>2016-11-29</td>
+                            <td>人生就像是一场修行</td>
+                          </tr>
+                          <tr>
+                            <td>贤心</td>
+                            <td>2016-11-29</td>
+                            <td>人生就像是一场修行</td>
+                          </tr>
+                          <tr>
+                            <td>贤心</td>
+                            <td>2016-11-29</td>
+                            <td>人生就像是一场修行</td>
+                          </tr>
+                          <tr>
+                            <td>贤心</td>
+                            <td>2016-11-29</td>
+                            <td>人生就像是一场修行</td>
+                          </tr>
+                          <tr>
+                            <td>贤心</td>
+                            <td>2016-11-29</td>
+                            <td>人生就像是一场修行</td>
+                          </tr>
+                          <tr>
+                            <td>贤心</td>
+                            <td>2016-11-29</td>
+                            <td>人生就像是一场修行</td>
+                          </tr>
+                          <tr>
+                            <td>贤心</td>
+                            <td>2016-11-29</td>
+                            <td>人生就像是一场修行</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+                </div>
+        </div>
+      </div>
+</body>
+<style>
+    html,
+    body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(245, 199, 199); */
+}
+.size{
+    width: 300px;
+    height: 200px;
+}
+.border{
+    border: 1px solid black;
+}
+</style>
+</html>
