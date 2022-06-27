@@ -13,6 +13,7 @@ $(function(){
 //   表单验证规则
 // 从layui中获取form对象
     let form =layui.form
+    let layer = layui.layer
   form.verify({
     username: function(value, item){ //value：表单的值、item：表单的DOM对象
       if(!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)){
@@ -39,20 +40,50 @@ $(function(){
       ,'密码必须6到12位，且不能出现空格'
     ] 
   }); 
-  // 监听注册表单的提交事件
+  // 监听注册表单的提交事件,无语子 form_reg和[]之间一定要有空格
   $('#form_reg').on('submit',function(e){
     // 阻止跳转
     e.preventDefault();
     console.log($('#form_reg[name=username]'));
-    $.post("http://127.0.0.1:3007/api/reguser", {username:'admin123',password:'admin123'},function(res){
-      console.log(res.message);
+    $.post("http://127.0.0.1:3007/api/reguser", {username:$('#form_reg [name=username]').val(),password:$('#form_reg [name=password]').val()},function(res){
+      console.log(res);
+      if(res.status!=0){
+        return layer.msg('注册失败')
+      }layer.msg('注册成功')
      });
   })
+  // $('#form_reg').submit(function (e) {
+  //   e.preventDefault();
+  //   $.ajax({
+  //     url:"http://127.0.0.1:3007/api/reguser",
+  //     method:'POST',
+  //     data:$(this).serialize(),
+  //     success:function (res) {
+  //       if(res.status!=0){
+  //         return layer.msg('注册失败')
+  //       }
+  //       layer.msg('注册成功')
+  //       location.href='/index.html'}
+  //   })
+  // })
+
   // 监听登录表单的提交事件
-  $('#form_login').on('submit',function(e){
+  $('#form_login').submit(function (e) {
     e.preventDefault();
-    $.post("http://127.0.0.1:3007/api/login", {username:'admin123',password:'admin123'},function(res){
-      console.log(res.message);
-     });
+    $.ajax({
+      url:"http://127.0.0.1:3007/api/login",
+      method:'POST',
+      data:$(this).serialize(),
+      success:function (res) {
+        if(res.status!=0){
+          return layer.msg('登录失败')
+        }
+        layer.msg('登陆成功')
+        console.log(res.token);
+        localStorage.setItem('token',res.token)
+        location.href='/index.html'
+      }
+    })
   })
+ 
   });
